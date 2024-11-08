@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google Fonts Links : Open Sans-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <title>Cost Estimator</title>
+  </head>
+
+  <body>
+    <h1>Estimate your cost</h1>
+
+    <!-- Header Tabs -->
+    <div class="container">
+      <div class="tabs">
+        <p class="active">Free</p>
+        <p>Team</p>
+        <p>Professional</p>
+        <p>Enterprise</p>
+      </div>
+
+      <div class="line"></div>
+
+      <!-- Toggle Button -->
+      <input type="checkbox" name="" id="toggle-checkbox" />
+      <div class="toggle-wrapper">
+        <img src="images/icon1.png" alt="" />
+
+        <label class="toggle" for="toggle-checkbox">
+          <div class="white-bg"></div>
+          <span class="mobile">Mobile</span>
+          <span class="web">Web</span>
+        </label>
+
+        <img src="images/icon2.png" alt="" />
+      </div>
+
+      <!-- Sessions Card -->
+      <div class="sessions-card">
+        <p>Monthly Sessions</p>
+        <p class="number">20,000</p>
+      </div>
+      <p class="description">A session is a continuous period of user activity on your web app or website. Choose exactly how many sessions you wish to record and discard the extras.</p>
+
+      <!-- Slider Section-->
+      <div class="slider">
+        <input type="range" id="slider" min="0" max="8" step="1" value="0">
+
+        <div class="scale">
+            <ul>
+                <li data-value="0">0</li>
+                <li data-value="1">1K</li>
+                <li data-value="2">10K</li>
+                <li data-value="3">25K</li>
+                <li data-value="4">50K</li>
+                <li data-value="5">250K</li>
+                <li data-value="6">1M</li>
+                <li data-value="7">10M</li>
+                <li data-value="8">250M</li>
+            </ul>
+          </div>
+      </div>
+
+      <!-- Cards Section -->
+       <div class="card-wrapper">
+
+        <!-- Card 1 -->
+        <div class="card">
+            <div class="top-section">
+                <p>Monthly Billing</p>
+                <p class="price">$199</p>
+                <p>Monthly</p>
+            </div>
+            <hr>
+            <p>Starting from 1-month data retention</p>
+            <p>10 team members</p>
+            <button>Try Free for 14 Days</button>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+            <div class="save">
+                <p>SAVE UP TO 16%</p>
+            </div>
+            <div class="top-section">
+                <p>Annual Billing</p>
+                <p class="price">$2,148</p>
+                <p>$179 Monthly</p>
+            </div>
+            <hr>
+            <p>Starting from 1-month data retention</p>
+            <p>10 team members</p>
+            <button>Try Free for 14 Days</button>
+        </div>
+       </div>
+
+      
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

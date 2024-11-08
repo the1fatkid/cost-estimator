@@ -1,0 +1,340 @@
+body{
+    background-color: rgb(233,223,255);
+    font-family: 'Open Sans', sans-serif;
+    padding: 32px;
+    color: rgb(44,44,44);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+h1{
+    /* color: rgb(83,49,156); */
+    color: var(--randomcolor);
+    margin: 32px 0 62px 0;
+    --randomcolor: rgb(34,52,123);
+}
+h1 span{
+    border: 1px solid var(--randomcolor);
+}
+
+/* Container Styles */
+.container{
+    background-color: white;
+    width:100%;
+    max-width:900px;
+    min-width: 430px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+    padding: 0 64px 64px 64px;
+}
+
+/* Header Tab Styles */
+.tabs{
+    width:100%;
+    display: flex;
+    justify-content: space-around;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: rgb(200, 175, 255);  
+    padding: 16px;
+}
+.tabs p{
+    padding: 8px;
+}
+.tabs p:hover{
+    color: rgb(83,49,156);
+    cursor: pointer;
+}
+.tabs p.active{
+    color: rgb(83,49,156);
+    position:relative;
+}
+
+.tabs .active::before{
+    content:"";
+    height:4px;
+    width:200%;  /* double the parent's width */
+    background-color: rgb(83,49,156);
+    border-radius: 10px;
+    position: absolute;
+    bottom: -32px;
+    /* left:-50%; OR*/
+    right: -50%;
+    z-index:2;
+}
+
+/* Horizontal Divider Line Styles */
+.line{
+    background-color: rgb(231,231,231);
+    /* background-color: red; */
+    width:100%;
+    height:3px;
+    position: absolute;
+    top:98px;
+}
+
+
+/* Toggle Styles */
+.toggle-wrapper{
+    display: flex;
+    align-items: center;
+    margin: 32px;
+    cursor: pointer;
+    user-select: none;
+}
+.toggle-wrapper img{
+    height: 40px;
+}
+.toggle{
+    background-color: rgb(83,49,156);
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    height: 32px;
+    width: 120px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    margin: 0 16px;
+    text-transform: uppercase;
+    position: relative;
+    z-index:1;
+    /* box-sizing: border-box; */
+}
+.web{
+    color: white;
+}
+.mobile{
+    color: rgb(83,49,156);
+}
+.white-bg{
+    height:26px;
+    background-color: white;
+    position: absolute;
+    z-index:-1;
+    border-radius: 20px;
+    width: 84px;
+    left:3px;
+}
+/* .white-bg-mobile{
+    width: 80px;
+    left:3px;
+}
+.white-bg-web{
+    width: 60px;
+    right: 3px;
+} */
+#toggle-checkbox{
+    display: none;
+}
+#toggle-checkbox:checked + .toggle-wrapper .white-bg{
+    width: 60px;
+    left:auto;
+    right: 3px;
+} 
+#toggle-checkbox:checked + .toggle-wrapper .web{
+    color: rgb(83,49,156);
+}
+#toggle-checkbox:checked + .toggle-wrapper .mobile{
+    color:white;
+}
+
+
+/* Sessions Card Styles */
+.sessions-card{
+    background-color: rgb(250, 247, 255);
+    text-align: center;
+    padding: 32px;
+    width: 50%;
+    text-transform: uppercase;
+    margin: 16px 0;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+.sessions-card p{
+    color: rgb(44,44,44);
+    font-size: 12px;
+    font-weight: bold;
+    margin: 16px 0 0 0;
+}
+.sessions-card .number{
+    color: rgb(83,49,156);
+    font-size: 54px;
+    margin:0;
+}
+.description{
+    line-height: 32px;
+    margin: 16px 0 32px 0;
+}
+
+/* Slider Styles */
+.slider{
+    width: 100%;
+    margin-bottom: 16px;
+}
+input[type=range]{
+    width:100%;
+    appearance: none;
+    background-color: rgb( 166, 166, 166);  
+    border-radius: 20px;
+}
+input[type=range]::-webkit-slider-runnable-track{
+    height:16px;
+   
+    /* background: linear-gradient(
+        90deg, 
+        rgba(2,0,36,1) 0%,
+        rgba(53,10,74,1) 36%,
+        rgba(83, 49, 156, 1) 100%
+    );    */
+}
+input[type=range]::-webkit-slider-thumb{
+    appearance: none;
+    cursor:grab;
+    height:24px;
+    width:24px;
+    border-radius: 50%;
+    background-color: rgb(83,49,156);
+    border: 2px solid white;
+    margin-top:-4px;
+    transition: transform 0.15s ease;
+}
+input[type=range]::-webkit-slider-thumb:hover{
+    transform: scale(1.25);
+}
+
+/* Scale styles */
+.scale{
+    width: 100%;
+}
+.slider .scale ul{
+    width: 100%;
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    padding: 0;
+    font-weight: bold;
+    color: rgb( 166, 166, 166);
+}
+.slider .scale li:hover{
+    cursor: pointer;
+}
+.slider li:first-of-type{
+    color: rgb(44,44,44);
+}
+
+/* Cards Section Styles */
+
+.card-wrapper{
+    display: flex;
+    /* margin: 16px 0; */
+}
+.card{
+    background-color: rgb(250, 247, 255);
+    color: rgb(83,49,156);
+    border-radius: 16px;
+    padding: 16px 32px;
+    margin: 16px;
+    box-shadow: 0px 3px 11px 1px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-weight: bold;
+    color: rbg(83,49,156);
+    transition: transform 0.15s ease;
+    position: relative;
+}
+.card:hover{
+    transform: translateY(-8px);
+}
+.card .top-section{
+    padding: 8px;
+    text-transform: uppercase;
+}
+.card .top-section p{
+    margin: 4px 0;
+}
+.card .price{
+    font-size: 42px;
+    color: rgb(44,44,44);
+}
+.card hr{
+    width: 30%;
+    /* border-style: none; */
+    border: 1px solid rgb(210, 210, 210);
+    border-radius: 2px;
+}
+.card button{
+    border: none;
+    color: white;
+    background-color: rgb(83,49,156);
+    padding: 16px;
+    border-radius: 10px;
+    transition: transform 0.15s ease;
+    font-weight: bold;
+    margin: 8px 0;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+.card button:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+.card .save{
+    position: absolute;
+    color: white;
+    background: linear-gradient(
+        90deg, 
+        rgba(2,0,36,1) 0%,
+        rgba(53,10,74,1) 36%,
+        rgba(83, 49, 156, 1) 100%
+    );
+    width: 100%;
+    top: -14px;
+    left: 0px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.card .save p{
+    margin: 4px;
+}
+
+
+/* Responsive Styles */
+@media only screen and (max-width: 750px){
+    .card-wrapper{
+        flex-wrap: wrap-reverse;
+    }
+    .card{
+        width: 100%;
+    }
+    .sessions-card{
+        width: 80%;
+    }
+}
+/* Responsive Styles */
+@media only screen and (max-width: 600px){
+    body{
+        padding: 8px;
+    }
+    h1{
+        margin: 0 0 16px 0;
+    }
+    .container{
+        padding: 0 16px;
+    }
+    .sessions-card{
+        width: 100%;
+    }
+    .toggle-wrapper{
+        width: 90%;
+        justify-content: space-around;
+    }
+}
